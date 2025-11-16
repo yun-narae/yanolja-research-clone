@@ -181,3 +181,122 @@ body {
     word-break: keep-all;
 }
 
+/* Swiper Custom Styles */
+.swiper-pagination-custom {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative !important;
+    width: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    text-align: center !important;
+}
+
+.swiper-pagination-custom span,
+.swiper-pagination-custom .swiper-pagination-bullet,
+.swiper-pagination-custom .swiper-pagination-bullet-custom {
+    width: 8px !important;
+    height: 8px !important;
+    background: transparent !important;
+    border: 1px solid var(--color-gray-400) !important;
+    opacity: 1 !important;
+    border-radius: 50% !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    margin: 0 !important;
+    position: relative !important;
+    flex-shrink: 0 !important;
+}
+
+.swiper-pagination-custom span.swiper-pagination-bullet-active,
+.swiper-pagination-custom .swiper-pagination-bullet-active,
+.swiper-pagination-custom .swiper-pagination-bullet-active-custom {
+    width: 8px !important;
+    height: 8px !important;
+    background: var(--color-black) !important;
+    border: 1px solid var(--color-black) !important;
+    border-radius: 50% !important;
+    opacity: 1 !important;
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+    color: var(--color-gray-600);
+    transition: color 0.3s ease;
+}
+
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+    color: var(--color-black);
+}
+
+.swiper-button-prev-custom.swiper-button-disabled,
+.swiper-button-next-custom.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Visual Highlight Swiper Cards 3D Effect */
+.swiper-container-wrapper {
+    position: relative;
+    overflow: visible;
+}
+
+.visual-highlight-swiper {
+    overflow: visible;
+    padding: 0 !important;
+    margin-left: 0;
+}
+
+.visual-highlight-swiper.swiper-3d {
+    perspective: 1200px;
+}
+
+.visual-highlight-swiper.swiper-3d .swiper-wrapper {
+    transform-style: preserve-3d;
+    overflow: visible;
+}
+
+.visual-highlight-swiper.swiper-cards .swiper-slide {
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+    height: auto;
+}
+
+.visual-highlight-swiper.swiper-cards .swiper-slide-active {
+    z-index: 3;
+}
+
+/* 왼쪽 슬라이드는 완전히 숨김 */
+.visual-highlight-swiper.swiper-cards .swiper-slide-prev {
+    opacity: 0 !important;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+/* 오른쪽 슬라이드는 보이도록 */
+.visual-highlight-swiper.swiper-cards .swiper-slide-next {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.visual-highlight-swiper.swiper-cards .swiper-slide-shadow {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.6s;
+}
+
+.visual-highlight-swiper.swiper-cards .swiper-slide-shadow-left,
+.visual-highlight-swiper.swiper-cards .swiper-slide-shadow-right {
+    opacity: 1;
+}
