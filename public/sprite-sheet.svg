@@ -27,7 +27,7 @@
     </symbol>
     
     <!-- Arrow Right -->
-    <symbol id="arrow_right" viewBox="0 0 15 14" fill="currentColor">
+    <symbol id="arrow_right" viewBox="0 0 15 14" fill="none">
         <path d="M4.5 13L10.5 7L4.5 0.999999" stroke="#7C7D81" stroke-width="1.4" stroke-linecap="round"/>
     </symbol>
     
@@ -107,35 +107,6 @@
     <!-- SNS: Weibo -->
     <symbol id="weibo" viewBox="0 0 26 26" fill="none">
         <path d="M13.0067 3.67379C16.0477 3.67379 16.4078 3.68712 17.6038 3.74045C18.7153 3.78934 19.3155 3.976 19.7156 4.13154C20.2447 4.33598 20.6271 4.58486 21.0227 4.98039C21.4229 5.38037 21.6674 5.75813 21.8719 6.28699C22.0275 6.68698 22.2143 7.29139 22.2632 8.398C22.3165 9.59794 22.3299 9.95793 22.3299 12.9933C22.3299 16.0332 22.3165 16.3932 22.2632 17.5887C22.2143 18.6997 22.0275 19.2997 21.8719 19.6997C21.6674 20.2285 21.4184 20.6107 21.0227 21.0063C20.6226 21.4063 20.2447 21.6507 19.7156 21.8551C19.3155 22.0107 18.7108 22.1973 17.6038 22.2462C16.4034 22.2995 16.0433 22.3129 13.0067 22.3129C9.96563 22.3129 9.60551 22.2995 8.40954 22.2462C7.29805 22.1973 6.69785 22.0107 6.29771 21.8551C5.76864 21.6507 5.38629 21.4018 4.9906 21.0063C4.59046 20.6063 4.34593 20.2285 4.14142 19.6997C3.98581 19.2997 3.79908 18.6953 3.75017 17.5887C3.69682 16.3887 3.68348 16.0287 3.68348 12.9933C3.68348 9.95348 3.69682 9.5935 3.75017 8.398C3.79908 7.28695 3.98581 6.68698 4.14142 6.28699C4.34593 5.75813 4.5949 5.37593 4.9906 4.98039C5.39073 4.58041 5.76864 4.33598 6.29771 4.13154C6.69785 3.976 7.3025 3.78934 8.40954 3.74045C9.60551 3.68712 9.96563 3.67379 13.0067 3.67379Z" fill="#0F0E0E"/>
-    </symbol>
-    
-    <!-- Background Chart -->
-    <symbol id="bg_chart" viewBox="0 0 128 109" fill="none">
-        <path d="M10 69H32C34.2091 69 36 70.7909 36 73V130C36 132.209 34.2091 134 32 134H10C7.79086 134 6 132.209 6 130V73C6 70.7909 7.79086 69 10 69Z" stroke="#E43608" stroke-width="12"/>
-        <mask id="path-2-inside-1_1816_1188" fill="white">
-            <rect x="49" y="32" width="44" height="105" rx="10"/>
-        </mask>
-        <rect x="49" y="32" width="44" height="105" rx="10" stroke="#E43608" stroke-width="24" mask="url(#path-2-inside-1_1816_1188)"/>
-        <mask id="path-3-inside-2_1816_1188" fill="white">
-            <rect x="100" width="42" height="136" rx="10"/>
-        </mask>
-        <rect x="100" width="42" height="136" rx="10" stroke="#E43608" stroke-width="24" mask="url(#path-3-inside-2_1816_1188)"/>
-    </symbol>
-    
-    <!-- Background Glass -->
-    <symbol id="bg_glass" viewBox="0 0 115 112" fill="none">
-        <path d="M87 84L130 127" stroke="#F84C1F" stroke-width="12" stroke-linecap="round"/>
-        <circle cx="50.5" cy="50.5" r="44.5" stroke="#F84C1F" stroke-width="12"/>
-        <path d="M33 55.2857L40.3029 62.9568C41.8794 64.6128 44.5206 64.6128 46.0971 62.9568L67 41" stroke="#F84C1F" stroke-width="12" stroke-linecap="round"/>
-    </symbol>
-    
-    <!-- Datalab -->
-    <symbol id="datalab" viewBox="0 0 138 111" fill="none">
-        <rect x="6" y="6" width="180" height="114" rx="10" stroke="#E43608" stroke-width="12"/>
-        <path d="M26 32H68" stroke="#E43608" stroke-width="12"/>
-        <path d="M26 51H43" stroke="#E43608" stroke-width="12"/>
-        <circle cx="110" cy="81" r="40" stroke="#E43608" stroke-width="12"/>
-        <path d="M109.418 40.8227V82.1476L137.367 109.532" stroke="#E43608" stroke-width="12"/>
     </symbol>
 </svg>
 
