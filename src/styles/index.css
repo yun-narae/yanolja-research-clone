@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+    --breakpoint-mobile: 568px;
+    --breakpoint-tablet: 769px;
+    --breakpoint-desktop: 1101px;
+}
+
 /* Pretendard Font Face */
 @font-face {
     font-family: "Pretendard";
@@ -172,33 +178,3 @@ body {
     word-break: keep-all;
 }
 
-/* Custom breakpoint utilities - Tailwind CSS v4 */
-/* mobile: 568px ~ 768px */
-@media (min-width: 568px) and (max-width: 768px) {
-    .mobile\:hidden {
-        display: none !important;
-    }
-    .mobile\:block {
-        display: block !important;
-    }
-}
-
-/* tablet: 769px ~ 1100px */
-@media (min-width: 769px) and (max-width: 1100px) {
-    .tablet\:hidden {
-        display: none !important;
-    }
-    .tablet\:block {
-        display: block !important;
-    }
-}
-
-/* desktop: 1101px 이상 */
-@media (min-width: 1101px) {
-    .desktop\:block {
-        display: block !important;
-    }
-    .desktop\:hidden {
-        display: none !important;
-    }
-}
