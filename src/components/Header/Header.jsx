@@ -114,7 +114,7 @@ export default function Header() {
                 <a 
                     href="/" 
                     className="flex shrink-0 w-40 tablet:w-[180px]"
-                    aria-label="야놀자 리서치 홈으로 이동"
+                    aria-label="야놀자 리서치"
                 >
                     <h1 className="sr-only">야놀자 리서치</h1>
                     <img
@@ -311,7 +311,7 @@ export default function Header() {
 
             {/* 배경 레이어 */}
             <div
-                className={`fixed inset-0 bg-black/60 transition-opacity duration-300 desktop:hidden ${
+                className={`z-10 fixed inset-0 bg-black/60 transition-opacity duration-300 desktop:hidden ${
                 isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                 }`}
                 onClick={() => setIsMenuOpen(false)}

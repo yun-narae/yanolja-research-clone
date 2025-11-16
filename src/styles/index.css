@@ -84,7 +84,8 @@
 :root {
     /* Primary Colors */
     --color-orange: #F54B1E;
-    --color-yellow: #FFC516;
+    --color-yellow-1: #FFC516;
+    --color-yellow-2: #FFD800;
     
     /* Purple/Violet Colors */
     --color-purple: #6E40D1;
