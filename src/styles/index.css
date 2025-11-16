@@ -3,6 +3,7 @@
 @theme {
     --breakpoint-mobile: 568px;
     --breakpoint-tablet: 769px;
+    --breakpoint-laptop: 993px;
     --breakpoint-desktop: 1101px;
 }
 
