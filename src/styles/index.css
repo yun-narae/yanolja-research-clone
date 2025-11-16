@@ -83,7 +83,8 @@
 /* Color Variables */
 :root {
     /* Primary Colors */
-    --color-orange: #F54B1E;
+    --color-orange-1: #F54B1E;
+    --color-orange-2: #E43608;
     --color-yellow-1: #FFC516;
     --color-yellow-2: #FFD800;
     
