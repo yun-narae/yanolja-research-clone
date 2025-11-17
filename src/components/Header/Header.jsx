@@ -150,7 +150,7 @@ export default function Header() {
                                 >
                                     <a 
                                         href={menu.href} 
-                                        className="block text-black transition-colors hover:text-(--color-orange)"
+                                        className="block text-black transition-colors hover:text-(--color-orange-1)"
                                         aria-haspopup={menu.subMenu.length > 0 ? "true" : undefined}
                                         aria-expanded={hoveredMenuId === menu.id && menu.subMenu.length > 0 ? "true" : "false"}
                                         aria-controls={menu.subMenu.length > 0 ? `submenu-${menu.id}` : undefined}
@@ -192,7 +192,7 @@ export default function Header() {
                 <div className="hidden laptop:flex shrink-0 items-center justify-center laptop:justify-center desktop:justify-end w-[180px] text-[16px] font-medium">
                     <div className="relative flex items-center">
                         <select 
-                            className="pr-6 bg-transparent border-none appearance-none cursor-pointer text-black transition-colors hover:text-(--color-orange)"
+                            className="pr-6 bg-transparent border-none appearance-none cursor-pointer text-black transition-colors hover:text-(--color-orange-1)"
                             value={selectedLang}
                             onChange={(e) => handleLangSelect(e.target.value)}
                             aria-label="언어 선택"
@@ -349,7 +349,7 @@ export default function Header() {
                         {menuData
                             .filter((menu) => menu.showInMobile)
                             .map((menu) => (
-                                <li key={menu.id} className="w-fit text-white transition-colors hover:text-(--color-orange)">
+                                <li key={menu.id} className="w-fit text-white transition-colors hover:text-(--color-orange-1)">
                                     <a
                                         href={menu.href}
                                         className="uppercase"
@@ -361,9 +361,9 @@ export default function Header() {
                             ))}
                         
                         {/* 언어 선택기 */}
-                        <li className="relative w-fit text-white transition-colors hover:text-(--color-orange)">
+                        <li className="relative w-fit text-white transition-colors hover:text-(--color-orange-1)">
                             <select 
-                                className="pr-6 bg-transparent border-none appearance-none cursor-pointer text-[28px] tablet:text-[32px] font-medium uppercase text-white transition-colors hover:text-(--color-orange)"
+                                className="pr-6 bg-transparent border-none appearance-none cursor-pointer text-[28px] tablet:text-[32px] font-medium uppercase text-white transition-colors hover:text-(--color-orange-1)"
                                 value={selectedLang}
                                 onChange={(e) => {
                                     handleLangSelect(e.target.value);
