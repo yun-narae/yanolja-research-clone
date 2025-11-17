@@ -228,6 +228,69 @@ body {
     transition: color 0.3s ease;
 }
 
+/* Swiper Scrollbar Custom Styles */
+.insight-swiper-scrollbar,
+.trend-swiper-scrollbar {
+    margin-right: 20px;
+    position: relative !important;
+    height: 2px !important;
+    background: var(--color-gray-border) !important;
+    border-radius: 2px !important;
+    margin-top: 24px !important;
+}
+
+/* Trend Swiper Pagination - 모바일에서 숨김 */
+.trend-swiper-pagination {
+    display: none !important;
+}
+
+@media (min-width: 769px) {
+    .insight-swiper-scrollbar {
+        margin-right: 0px !important;
+    }
+    
+    .trend-swiper-scrollbar {
+        display: none !important;
+        margin-right: 0px !important;
+    }
+    
+    .trend-swiper-pagination {
+        display: flex !important;
+    }
+    
+    .insight-section-width {
+        width: calc(65% - 40px) !important;
+    }
+    
+    .trend-section-width {
+        width: calc(23% - 40px) !important;
+        align-self: flex-start !important;
+    }
+    
+    .trend-swiper {
+        height: fit-content !important;
+    }
+    
+    .trend-swiper .swiper-wrapper {
+        height: fit-content !important;
+    }
+    
+    .trend-swiper .swiper-slide {
+        height: auto !important;
+    }
+    
+    .trend-swiper .swiper-slide-active {
+        height: auto !important;
+    }
+}
+
+.insight-swiper-scrollbar .swiper-scrollbar-drag,
+.trend-swiper-scrollbar .swiper-scrollbar-drag {
+    background: var(--color-gray-300) !important;
+    border-radius: 2px !important;
+    height: 100% !important;
+}
+
 .swiper-button-prev-custom:hover,
 .swiper-button-next-custom:hover {
     color: var(--color-black);
