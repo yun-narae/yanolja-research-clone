@@ -24,6 +24,11 @@ export default function ReportCard({ data }) {
                     
                     {/* 콘텐츠 영역 */}
                     <div className="group flex flex-col items-start mt-5 tablet:mt-[18px]">
+                        {/* 제목 - 스크린 리더 전용 */}
+                        <h4 className="sr-only">
+                            {cardData.title}
+                        </h4>
+                        
                         {/* 날짜 */}
                         <small className="text-(--color-gray-200) font-medium text-xs tablet:text-sm">
                             {cardData.date}

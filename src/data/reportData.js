@@ -15,7 +15,7 @@ export const reportData = [
     },
     {
         id: "report2",
-        title: "특히 데이터를 활용한 귀갑산업 기술 트렌드 분석",
+        title: "특허 데이터를 활용한 관광산업 기술 트렌드 분석",
         date: "2025.01.09",
         image: img2,
         href: "/",
@@ -29,14 +29,14 @@ export const reportData = [
     },
     {
         id: "report4",
-        title: "속학대의 침투와 규제 가산낚",
+        title: "숙박형태의 변화와 규제 개선방안",
         date: "2024.02.29",
         image: img4,
         href: "/",
     },
     {
         id: "report5",
-        title: "김치와",
+        title: "플랫폼 경제와 관광산업",
         date: "2024.01.30",
         image: img5,
         href: "/",
