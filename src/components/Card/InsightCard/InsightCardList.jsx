@@ -49,9 +49,11 @@ export default function InsightCardList() {
                         draggable: true,
                     }}
                     className="insight-swiper"
+                    role="list"
+                    aria-label="인사이트 / 브리프 카드 목록"
                 >
                     {insightData.map((item) => (
-                        <SwiperSlide key={item.id}>
+                        <SwiperSlide key={item.id} role="listitem">
                             <InsightCard data={item} />
                         </SwiperSlide>
                     ))}

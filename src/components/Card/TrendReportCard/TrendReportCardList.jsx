@@ -58,9 +58,11 @@ export default function TrendReportCardList() {
                         bulletActiveClass: 'swiper-pagination-bullet-active-custom',
                     }}
                     className="trend-swiper"
+                    role="list"
+                    aria-label="동향보고서 카드 목록"
                 >
                     {trendReportData.map((item) => (
-                        <SwiperSlide key={item.id}>
+                        <SwiperSlide key={item.id} role="listitem">
                             <TrendReportCard data={item} />
                         </SwiperSlide>
                     ))}

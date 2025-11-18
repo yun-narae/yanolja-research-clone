@@ -10,6 +10,7 @@ export default function TrendReportCard({ data }) {
                 className="block relative w-full cursor-pointer group"
                 role="link"
                 tabIndex="0"
+                aria-label={`${cardData.title} - ${cardData.date}`}
             >
                 <div className="relative w-full aspect-[1.425/2] tablet:aspect-[1/1.4] overflow-hidden rounded-[20px] tablet:rounded-[30px]">
                     {/* 배경 이미지 */}

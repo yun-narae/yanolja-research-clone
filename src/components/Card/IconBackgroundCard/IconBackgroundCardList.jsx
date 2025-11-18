@@ -7,6 +7,7 @@ export default function IconBackgroundCardList() {
             <h3 className="sr-only">야놀자 데이터</h3>
             <ul 
                 role="list"
+                aria-label="야놀자 데이터 카드 목록"
                 className="
                     flex 
                     flex-col 

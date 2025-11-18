@@ -10,6 +10,7 @@ export default function InsightCard({ data }) {
                 className="block relative w-full cursor-pointer group"
                 role="link"
                 tabIndex="0"
+                aria-label={`${cardData.category}: ${cardData.title}`}
             >
                 <div className="flex flex-col w-full overflow-hidden bg-white">
                     {/* 이미지 영역 */}

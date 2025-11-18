@@ -55,9 +55,11 @@ export default function VisualHighlightCardList() {
                     loop={true}
                     loopAdditionalSlides={visualHighlightData.length}
                     className="visual-highlight-swiper main_swiper_pc swiper-cards swiper-3d"
+                    role="list"
+                    aria-label="야놀자 배너 카드 목록"
                 >
                     {visualHighlightData.map((item) => (
-                        <SwiperSlide key={item.id}>
+                        <SwiperSlide key={item.id} role="listitem">
                             <VisualHighlightCard data={item} />
                         </SwiperSlide>
                     ))}
