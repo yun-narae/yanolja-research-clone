@@ -5,7 +5,11 @@ export default function VisualHighlightCard({ data }) {
 
     return (
         <article className="relative w-full h-[280px] tablet:h-[350px]">
-            <a href={cardData.href} className="block relative w-full h-full cursor-default">
+            <a 
+                href={cardData.href} 
+                className="block relative w-full h-full cursor-default"
+                aria-label={`${cardData.category}: ${cardData.title}`}
+            >
                 <div className="relative w-full h-full overflow-hidden rounded-[20px] tablet:rounded-[30px]">
                     {/* 배경 이미지 */}
                     <img

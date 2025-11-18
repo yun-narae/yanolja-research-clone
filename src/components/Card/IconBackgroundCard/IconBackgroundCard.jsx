@@ -17,6 +17,7 @@ export default function IconBackgroundCard({ data }) {
                 href={cardData.href}
                 role="link"
                 tabIndex="0"
+                aria-label={`${cardData.title} - ${cardData.linkText}`}
                 className="
                     relative flex flex-col items-start justify-between w-full h-full overflow-hidden
                     p-4 tablet:p-6
