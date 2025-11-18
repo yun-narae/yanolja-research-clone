@@ -14,13 +14,13 @@ export default function InsightCardList() {
     const swiperRef = useRef(null);
 
     return (
-        <article className="w-full">
+        <article className="w-full flex flex-col justify-between h-full">
             <h3 className="sr-only">인사이트 / 브리프 카드 목록</h3>
             <SectionTitle 
                 title="인사이트 / 브리프"
                 showArrow
             />
-            <div className="swiper-container-wrapper w-full relative">
+            <div className="swiper-container-wrapper w-full relative h-full">
                 <Swiper
                     onSwiper={(swiper) => {
                         swiperRef.current = swiper;
@@ -87,7 +87,7 @@ export default function InsightCardList() {
             </div>
             
             {/* 스크롤바 */}
-            <div className="insight-swiper-scrollbar mt-6"></div>
+            <div className="insight-swiper-scrollbar mt-[36px]"></div>
         </article>
     );
 }

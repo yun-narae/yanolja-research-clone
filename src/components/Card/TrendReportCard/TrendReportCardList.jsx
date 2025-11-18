@@ -29,13 +29,16 @@ export default function TrendReportCardList() {
                     style={{ width: '100%' }}
                     modules={[Navigation, Pagination, Scrollbar]}
                     spaceBetween={16}
-                    slidesPerView={3.5}
+                    slidesPerView={1.5}
                     scrollbar={{
                         el: '.trend-swiper-scrollbar',
                         draggable: true,
                         hide: false,
                     }}
                     breakpoints={{
+                        480: {
+                            slidesPerView: 3.2,
+                        },
                         769: {
                             slidesPerView: 1,
                             freeMode: false,
@@ -99,7 +102,7 @@ export default function TrendReportCardList() {
             <div className="trend-swiper-scrollbar tablet:hidden mt-6"></div>
             
             {/* 페이지네이션 (태블릿 이상) */}
-            <div className="trend-swiper-pagination swiper-pagination-custom hidden tablet:flex items-center justify-center gap-2 mt-6"></div>
+            <div className="trend-swiper-pagination swiper-pagination-custom hidden tablet:flex items-center justify-center gap-2 mt-[30px]"></div>
         </article>
     );
 }
