@@ -11,6 +11,7 @@ import SvgIcon from "../SvgIcon/SvgIcon";
  * @param {string} linkText - 링크 텍스트 (showMoreLink가 true일 때 사용, 기본값: '더보기')
  * @param {function} onTitleClick - 제목 클릭 핸들러 (추후 다른 콘텐츠 표시용)
  * @param {function} onSubtitleClick - 부제목 클릭 핸들러 (추후 다른 콘텐츠 표시용)
+ * @param {boolean} activeTitle - title이 활성 상태인지 여부 (subtitle과 함께 사용 시)
  * @param {string} className - 추가 CSS 클래스
  */
 export default function SectionTitle({ 
@@ -22,6 +23,7 @@ export default function SectionTitle({
     linkText = '더보기',
     onTitleClick,
     onSubtitleClick,
+    activeTitle = true,
     className = ''
 }) {
     const hasSubtitle = !!subtitle;
@@ -29,9 +31,9 @@ export default function SectionTitle({
     // 텍스트 2개인 경우 (title + subtitle)
     if (hasSubtitle) {
         return (
-            <div className={`w-full flex items-center justify-between mb-6 tablet:mb-8 ${className}`}>
+            <div className={`w-full flex items-center justify-between mb-6 tablet:mb-[30px] ${className}`}>
                 <div className="flex gap-2">
-                    <strong className="text-(--color-text-primary) text-[1.75rem] font-semibold">
+                    <strong className={`${activeTitle ? 'text-(--color-text-primary)' : 'text-(--color-gray-200)'} cursor-pointer hover:text-(--color-orange-1) transition-colors text-[24px] tablet:text-[28px] font-semibold`}>
                         {onTitleClick ? (
                             <button
                                 type="button"
@@ -45,7 +47,8 @@ export default function SectionTitle({
                             title
                         )}
                     </strong>
-                    <strong className="text-(--color-gray-200) text-[1.75rem] font-semibold">
+                    <span className="text-(--color-gray-border) self-center">|</span>
+                    <strong className={`${!activeTitle ? 'text-(--color-text-primary)' : 'text-(--color-gray-200)'} cursor-pointer hover:text-(--color-orange-1) transition-colors text-[24px] tablet:text-[28px] font-semibold`}>
                         {onSubtitleClick ? (
                             <button
                                 type="button"
@@ -88,7 +91,7 @@ export default function SectionTitle({
                     className="group flex items-center gap-2 cursor-pointer hover:text-(--color-orange-1) transition-colors"
                     aria-label={`${title} 더보기`}
                 >
-                    <strong className="text-(--color-text-primary) text-[1.75rem] font-semibold group-hover:text-(--color-orange-1) transition-colors">
+                    <strong className="text-(--color-text-primary) text-[24px] tablet:text-[28px] font-semibold group-hover:text-(--color-orange-1) transition-colors">
                         {onTitleClick ? (
                             <button
                                 type="button"
@@ -116,7 +119,7 @@ export default function SectionTitle({
                 </a>
             ) : (
                 <div className="flex items-center gap-2">
-                    <strong className="text-(--color-text-primary) text-[1.75rem] font-semibold">
+                    <strong className="text-(--color-text-primary) text-[24px] tablet:text-[28px] font-semibold">
                         {onTitleClick ? (
                             <button
                                 type="button"
