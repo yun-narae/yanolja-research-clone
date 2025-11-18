@@ -138,7 +138,7 @@
     --color-bg-darkest: #141415;
     --color-bg-orange-light: #FFDFD7;
     --color-bg-pink-light: #FFF4F6;
-    --color-bg-yellow-light: #FFF7EA;
+    --color-bg-yellow-light: #F5EBE1;
     
     /* Text Colors */
     --color-text-primary: #1B1716;
@@ -230,13 +230,13 @@ body {
 
 /* Swiper Scrollbar Custom Styles */
 .insight-swiper-scrollbar,
-.trend-swiper-scrollbar {
+.trend-swiper-scrollbar,
+.report-swiper-scrollbar {
     margin-right: 20px;
     position: relative !important;
     height: 2px !important;
     background: var(--color-gray-border) !important;
     border-radius: 2px !important;
-    margin-top: 24px !important;
 }
 
 /* Trend Swiper Pagination - 모바일에서 숨김 */
@@ -251,6 +251,10 @@ body {
     
     .trend-swiper-scrollbar {
         display: none !important;
+        margin-right: 0px !important;
+    }
+    
+    .report-swiper-scrollbar {
         margin-right: 0px !important;
     }
     
@@ -285,7 +289,8 @@ body {
 }
 
 .insight-swiper-scrollbar .swiper-scrollbar-drag,
-.trend-swiper-scrollbar .swiper-scrollbar-drag {
+.trend-swiper-scrollbar .swiper-scrollbar-drag,
+.report-swiper-scrollbar .swiper-scrollbar-drag {
     background: var(--color-gray-300) !important;
     border-radius: 2px !important;
     height: 100% !important;

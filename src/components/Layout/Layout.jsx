@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import MainContent from "../MainContent/MainContent";
 import InsightTrendReportContent from '../InsightTrendReportContent/InsightTrendReportContent';
+import ReportContent from '../ReportContent/ReportContent';
 
 export default function Layout() {
     return (
@@ -11,6 +12,7 @@ export default function Layout() {
             <main>
                 <MainContent />
                 <InsightTrendReportContent />
+                <ReportContent />
             </main>
             <Footer />
         </>
