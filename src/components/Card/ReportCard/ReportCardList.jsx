@@ -5,22 +5,22 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import InsightCard from './InsightCard';
-import { insightData } from '../../../data/insightData';
+import ReportCard from './ReportCard';
+import { reportData } from '../../../data/reportData';
 import SvgIcon from '../../SvgIcon/SvgIcon';
 import SectionTitle from '../../SectionTitle/SectionTitle';
 
-export default function InsightCardList() {
+export default function ReportCardList() {
     const swiperRef = useRef(null);
 
     return (
-        <article className="w-full flex flex-col justify-between h-full">
-            <h3 className="sr-only">인사이트 / 브리프 카드 목록</h3>
+        <article className="w-full max-w-[1290px] mx-auto pl-[20px] py-[56px] tablet:py-[80px] tablet:px-[15px]">
+            <h3 className="sr-only">연구보고서 카드 목록</h3>
             <SectionTitle 
-                title="인사이트 / 브리프"
+                title="연구보고서"
                 showArrow
             />
-            <div className="swiper-container-wrapper w-full relative h-full">
+            <div className="swiper-container-wrapper w-full relative">
                 <Swiper
                     onSwiper={(swiper) => {
                         swiperRef.current = swiper;
@@ -30,31 +30,31 @@ export default function InsightCardList() {
                     spaceBetween={16}
                     slidesPerView={1.5}
                     breakpoints={{
-                        769: {
-                            slidesPerView: 2.5,
+                        480: {
+                            slidesPerView: 3.2,
                         },
-                        1024: {
-                            slidesPerView: 3.5,
+                        769: {
+                            slidesPerView: 4.5,
                         }
                     }}
                     speed={400}
                     freeMode={true}
                     watchSlidesProgress={true}
                     navigation={{
-                        prevEl: '.insight-swiper-button-prev',
-                        nextEl: '.insight-swiper-button-next',
+                        prevEl: '.report-swiper-button-prev',
+                        nextEl: '.report-swiper-button-next',
                     }}
                     scrollbar={{
-                        el: '.insight-swiper-scrollbar',
+                        el: '.report-swiper-scrollbar',
                         draggable: true,
                     }}
-                    className="insight-swiper"
+                    className="report-swiper"
                     role="list"
-                    aria-label="인사이트 / 브리프 카드 목록"
+                    aria-label="연구보고서 카드 목록"
                 >
-                    {insightData.map((item) => (
+                    {reportData.map((item) => (
                         <SwiperSlide key={item.id} role="listitem">
-                            <InsightCard data={item} />
+                            <ReportCard data={item} />
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -62,7 +62,7 @@ export default function InsightCardList() {
                 {/* 네비게이션 버튼 - tablet부터 표시 */}
                 <button
                     type="button"
-                    className="insight-swiper-button-prev hidden tablet:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 p-5  items-center justify-center cursor-pointer text-gray-500 bg-white rounded-full shadow-md hover:bg-gray-50 transition-colors"
+                    className="report-swiper-button-prev hidden tablet:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 p-5 items-center justify-center cursor-pointer text-gray-500 bg-white rounded-full shadow-md hover:bg-gray-50 transition-colors"
                     aria-label="이전 슬라이드"
                 >
                     <SvgIcon 
@@ -74,7 +74,7 @@ export default function InsightCardList() {
                 </button>
                 <button
                     type="button"
-                    className="insight-swiper-button-next hidden tablet:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 p-5 items-center justify-center cursor-pointer text-gray-500 bg-white rounded-full shadow-md hover:bg-gray-50 transition-colors"
+                    className="report-swiper-button-next hidden tablet:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 p-5 items-center justify-center cursor-pointer text-gray-500 bg-white rounded-full shadow-md hover:bg-gray-50 transition-colors"
                     aria-label="다음 슬라이드"
                 >
                     <SvgIcon 
@@ -87,7 +87,7 @@ export default function InsightCardList() {
             </div>
             
             {/* 스크롤바 */}
-            <div className="insight-swiper-scrollbar mt-[36px]"></div>
+            <div className="report-swiper-scrollbar mt-[36px] tablet:mt-[50px]"></div>
         </article>
     );
 }
