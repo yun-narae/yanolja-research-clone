@@ -1,9 +1,15 @@
+import useScrollFadeIn from '../../hooks/useScrollFadeIn';
 import { snsData } from '../../data/snsData';
 import SvgIcon from '../SvgIcon/SvgIcon';
 
 export default function SnsContent() {
+    const [ref, isVisible] = useScrollFadeIn();
+
     return (
-        <section className="w-full bg-(--color-bg-yellow-light)">
+        <section 
+            ref={ref}
+            className={`w-full bg-(--color-bg-yellow-light) ${isVisible ? 'fade-in-up' : 'fade-in-up-hidden'}`}
+        >
             <h2 className="sr-only">SNS 구독</h2>
             
             <div className="flex flex-col tablet:flex-row items-center tablet:items-center justify-center gap-[40px] tablet:gap-auto max-w-[1290px] mx-auto px-[20px] pt-[70px] pb-[90px] ">
