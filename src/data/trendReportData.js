@@ -1,5 +1,6 @@
 // TrendReportCard 더미데이터
-import img1 from "../asset/trends/img1.png";
+// 이미지 크기 최적화: 표시 크기(600x800)에 맞춰 리사이즈
+import img1 from "../asset/trends/img1.png?w=600&format=webp&quality=75";
 
 export const trendReportData = [
     {

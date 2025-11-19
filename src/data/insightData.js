@@ -1,9 +1,10 @@
 // InsightCard 더미데이터
-import img1 from "../asset/insight/img1.png";
-import img2 from "../asset/insight/img2.png";
-import img3 from "../asset/insight/img3.png";
-import img4 from "../asset/insight/img4.png";
-import img5 from "../asset/insight/img5.png";
+// 이미지 크기 최적화: 표시 크기(600x400)에 맞춰 리사이즈
+import img1 from "../asset/insight/img1.png?w=600&format=webp&quality=75";
+import img2 from "../asset/insight/img2.png?w=600&format=webp&quality=75";
+import img3 from "../asset/insight/img3.png?w=600&format=webp&quality=75";
+import img4 from "../asset/insight/img4.png?w=600&format=webp&quality=75";
+import img5 from "../asset/insight/img5.png?w=600&format=webp&quality=75";
 
 export const insightData = [
     {

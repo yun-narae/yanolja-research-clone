@@ -94,7 +94,7 @@ export default function VisualHighlightCardList() {
                         className="text-current"
                     />
                 </button>
-                <div className="swiper-pagination-custom flex items-center gap-2">
+                <div className="swiper-pagination-custom flex items-center gap-4">
                     {visualHighlightData.map((_, index) => (
                         <button
                             key={index}

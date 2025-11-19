@@ -18,6 +18,11 @@ export default function TrendReportCard({ data }) {
                         src={cardData.image}
                         alt={cardData.title}
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        loading="lazy"
+                        decoding="async"
+                        width="600"
+                        height="800"
+                        fetchPriority="low"
                     />
                     
                     {/* 어두운 오버레이 및 콘텐츠 */}

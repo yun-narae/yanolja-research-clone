@@ -1,10 +1,11 @@
 // VisualHighlightCard 더미데이터
-import img1 from "../asset/top_bg/img1.png";
-import img2 from "../asset/top_bg/img2.png";
-import img3 from "../asset/top_bg/img3.png";
-import img4 from "../asset/top_bg/img4.png";
-import img5 from "../asset/top_bg/img5.png";
-import img6 from "../asset/top_bg/img6.png";
+// 이미지 크기 최적화: 표시 크기(800x600)에 맞춰 리사이즈
+import img1 from "../asset/top_bg/img1.png?w=800&format=webp&quality=75";
+import img2 from "../asset/top_bg/img2.png?w=800&format=webp&quality=75";
+import img3 from "../asset/top_bg/img3.png?w=800&format=webp&quality=75";
+import img4 from "../asset/top_bg/img4.png?w=800&format=webp&quality=75";
+import img5 from "../asset/top_bg/img5.png?w=800&format=webp&quality=75";
+import img6 from "../asset/top_bg/img6.png?w=800&format=webp&quality=75";
 
 export const visualHighlightData = [
     {
