@@ -114,13 +114,17 @@ export default function Header() {
                 <a 
                     href="/" 
                     className="flex shrink-0 w-40 tablet:w-[180px]"
-                    aria-label="야놀자 리서치"
+                    aria-label="로고"
                 >
                     <h1 className="sr-only">야놀자 리서치</h1>
                     <img
                         src={logo}
-                        alt="야놀자 리서치"
+                        alt="로고"
                         className="w-auto desktop:h-auto"
+                        loading="eager"
+                        fetchPriority="high"
+                        width="180"
+                        height="40"
                     />
                 </a>
 
@@ -335,6 +339,7 @@ export default function Header() {
                         aria-label="메뉴 닫기"
                         onClick={() => setIsMenuOpen(false)}
                         className="relative flex items-center justify-center w-9 h-9 p-0 bg-transparent border-0 rounded-full cursor-pointer transition-colors hover:bg-gray-800"
+                        tabIndex={isMenuOpen ? 0 : -1}
                     >
                         {/* X 라인 1 */}
                         <span aria-hidden="true" className="absolute block w-5 h-0.5 bg-white rounded-xs transform rotate-45" />
@@ -354,6 +359,7 @@ export default function Header() {
                                         href={menu.href}
                                         className="uppercase"
                                         onClick={() => setIsMenuOpen(false)}
+                                        tabIndex={isMenuOpen ? 0 : -1}
                                     >
                                         {menu.label}
                                     </a>
@@ -369,6 +375,8 @@ export default function Header() {
                                     handleLangSelect(e.target.value);
                                 }}
                                 aria-label="언어 선택"
+                                tabIndex={isMenuOpen ? 0 : -1}
+                                disabled={!isMenuOpen}
                             >
                                 <option value="ko">KR</option>
                                 <option value="en">EN</option>
