@@ -5,6 +5,7 @@ import MainContent from "../MainContent/MainContent";
 import InsightTrendReportContent from '../InsightTrendReportContent/InsightTrendReportContent';
 import ReportContent from '../ReportContent/ReportContent';
 import PressDataContent from '../PressDataContent/PressDataContent';
+import SnsContent from '../SnsContent/SnsContent';
 
 export default function Layout() {
     return (
@@ -15,6 +16,7 @@ export default function Layout() {
                 <InsightTrendReportContent />
                 <ReportContent />
                 <PressDataContent />
+                <SnsContent />
             </main>
             <Footer />
         </>
