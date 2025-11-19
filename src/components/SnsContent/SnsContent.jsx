@@ -48,7 +48,7 @@ export default function SnsContent() {
                 
                 {/* 구독신청하기 버튼 */}
                 <div className="w-full tablet:w-auto flex-shrink-0 flex items-center justify-center tablet:justify-end group">
-                    <a 
+                    <a
                         href="/"
                         aria-label="구독신청하기"
                         target="_blank"
@@ -57,9 +57,9 @@ export default function SnsContent() {
                         <button
                             type="button"
                             className="inline-block bg-(--color-orange-1) text-white px-[50px] py-[20px] tablet:py-4 rounded-full tablet:text-base font-semibold group-hover:bg-(--color-orange-2) transition-colors cursor-pointer"
-                            aria-label="구독신청하기"
-                        >
-                            구독신청하기
+                        aria-label="구독신청하기"
+                    >
+                        구독신청하기
                         </button>
                     </a>
                 </div>

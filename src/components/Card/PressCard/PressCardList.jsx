@@ -43,7 +43,7 @@ export default function PressCardList() {
                     ))
                 ) : (
                     currentData.map((item) => (
-                        <PressCard key={item.id} data={item} />
+                    <PressCard key={item.id} data={item} />
                     ))
                 )}
             </ul>

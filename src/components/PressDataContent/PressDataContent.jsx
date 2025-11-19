@@ -32,7 +32,7 @@ export default function PressDataContent() {
                     {isLoading ? (
                         <DataCardSkeleton />
                     ) : (
-                        <DataCard />
+                    <DataCard />
                     )}
                 </div>
             </div>

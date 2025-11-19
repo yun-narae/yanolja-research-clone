@@ -35,7 +35,7 @@ export default function IconBackgroundCardList() {
                     ))
                 ) : (
                     iconBackgroundData.map((item) => (
-                        <IconBackgroundCard data={item} key={item.id}  />
+                    <IconBackgroundCard data={item} key={item.id}  />
                     ))
                 )}
             </ul>

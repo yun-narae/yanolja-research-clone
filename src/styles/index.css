@@ -186,7 +186,6 @@ body {
     display: flex !important;
     align-items: center;
     justify-content: center;
-    gap: 8px;
     position: relative !important;
     width: auto !important;
     bottom: auto !important;
