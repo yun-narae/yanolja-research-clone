@@ -1,8 +1,19 @@
+import { useState, useEffect } from 'react';
 import PressCardList from "../Card/PressCard/PressCardList";
 import DataCard from "../Card/DataCard/DataCard";
+import DataCardSkeleton from "../Skeleton/DataCardSkeleton";
 import SvgIcon from "../SvgIcon/SvgIcon";
 
 export default function PressDataContent() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <section className="w-full max-w-[1290px] mx-auto px-[20px] tablet:px-[15px] my-[56px] tablet:mb-[80px]">
             <h2 className="sr-only">언론보도 및 데이터</h2>
@@ -13,7 +24,11 @@ export default function PressDataContent() {
                 </div>
 
                 <div className="tablet:flex-[1] tablet:max-w-[235px]">
-                    <DataCard />
+                    {isLoading ? (
+                        <DataCardSkeleton />
+                    ) : (
+                        <DataCard />
+                    )}
                 </div>
             </div>
         </section>

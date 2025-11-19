@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, EffectCards } from 'swiper/modules';
 import 'swiper/css';
@@ -7,11 +7,21 @@ import 'swiper/css/effect-cards';
 import VisualHighlightCard from './VisualHighlightCard';
 import { visualHighlightData } from '../../../data/visualHighlightData';
 import SvgIcon from '../../SvgIcon/SvgIcon';
+import VisualHighlightCardSkeleton from '../../Skeleton/VisualHighlightCardSkeleton';
 
 export default function VisualHighlightCardList() {
     const [isPlaying, setIsPlaying] = useState(true);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [isLoading, setIsLoading] = useState(true);
     const swiperRef = useRef(null);
+
+    useEffect(() => {
+        // 로딩 시뮬레이션
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
         <article className="w-full relative overflow-hidden desktop:overflow-visible flex flex-col items-center 
@@ -19,53 +29,58 @@ export default function VisualHighlightCardList() {
         ">
             <h3 className="sr-only">야놀자 배너</h3>
             <div className="swiper-container-wrapper w-full">
-                <Swiper
-                    onSwiper={(swiper) => {
-                        swiperRef.current = swiper;
-                        // 초기 인덱스 설정
-                        setActiveIndex(swiper.realIndex);
-                    }}
-                    onSlideChange={(swiper) => {
-                        // 슬라이드 변경 시 활성 인덱스 업데이트
-                        const realIndex = swiper.realIndex;
-                        setActiveIndex(realIndex);
-                    }}
-                    style={{ width: '100%' }}
-                    modules={[Navigation, Autoplay, EffectCards]}
-                    effect="cards"
-                    cardsEffect={{
-                        perSlideOffset: 8,
-                        perSlideRotate: 0,
-                        rotate: false,
-                        slideShadows: true,
-                    }}
-                    spaceBetween={0}
-                    slidesPerView={1}
-                    speed={400}
-                    watchSlidesProgress={true}
-                    navigation={{
-                        prevEl: '.swiper-button-prev-custom',
-                        nextEl: '.swiper-button-next-custom',
-                    }}
-                    pagination={false}
-                    autoplay={{
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    }}
-                    loop={false}
-                    className="visual-highlight-swiper main_swiper_pc swiper-cards swiper-3d"
-                    role="list"
-                    aria-label="야놀자 배너 카드 목록"
-                >
-                    {visualHighlightData.map((item) => (
-                        <SwiperSlide key={item.id} role="listitem">
-                            <VisualHighlightCard data={item} />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+                {isLoading ? (
+                    <VisualHighlightCardSkeleton />
+                ) : (
+                    <Swiper
+                        onSwiper={(swiper) => {
+                            swiperRef.current = swiper;
+                            // 초기 인덱스 설정
+                            setActiveIndex(swiper.realIndex);
+                        }}
+                        onSlideChange={(swiper) => {
+                            // 슬라이드 변경 시 활성 인덱스 업데이트
+                            const realIndex = swiper.realIndex;
+                            setActiveIndex(realIndex);
+                        }}
+                        style={{ width: '100%' }}
+                        modules={[Navigation, Autoplay, EffectCards]}
+                        effect="cards"
+                        cardsEffect={{
+                            perSlideOffset: 8,
+                            perSlideRotate: 0,
+                            rotate: false,
+                            slideShadows: true,
+                        }}
+                        spaceBetween={0}
+                        slidesPerView={1}
+                        speed={400}
+                        watchSlidesProgress={true}
+                        navigation={{
+                            prevEl: '.swiper-button-prev-custom',
+                            nextEl: '.swiper-button-next-custom',
+                        }}
+                        pagination={false}
+                        autoplay={{
+                            delay: 5000,
+                            disableOnInteraction: false,
+                        }}
+                        loop={false}
+                        className="visual-highlight-swiper main_swiper_pc swiper-cards swiper-3d"
+                        role="list"
+                        aria-label="야놀자 배너 카드 목록"
+                    >
+                        {visualHighlightData.map((item) => (
+                            <SwiperSlide key={item.id} role="listitem">
+                                <VisualHighlightCard data={item} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                )}
             </div>
             
             {/* 커스텀 네비게이션 및 페이지네이션 */}
+            {!isLoading && (
             <div className="flex items-center justify-center gap-2 mt-6">
                 <button
                     type="button"
@@ -146,6 +161,7 @@ export default function VisualHighlightCardList() {
                     
                 </button>
             </div>
+            )}
         </article>
     );
 }

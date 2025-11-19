@@ -1,7 +1,18 @@
+import { useState, useEffect } from 'react';
 import IconBackgroundCard from './IconBackgroundCard';
 import { iconBackgroundData } from '../../../data/iconBackgroundData';
+import IconBackgroundCardSkeleton from '../../Skeleton/IconBackgroundCardSkeleton';
 
 export default function IconBackgroundCardList() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <article className='w-full desktop:w-[calc(25%-20px)] desktop:shrink-0 desktop:overflow-hidden'>
             <h3 className="sr-only">야놀자 데이터</h3>
@@ -18,9 +29,15 @@ export default function IconBackgroundCardList() {
                     items-stretch 
                 "
             >
-                {iconBackgroundData.map((item) => (
-                    <IconBackgroundCard data={item} key={item.id}  />
-                ))}
+                {isLoading ? (
+                    Array.from({ length: iconBackgroundData.length }).map((_, index) => (
+                        <IconBackgroundCardSkeleton key={`skeleton-${index}`} />
+                    ))
+                ) : (
+                    iconBackgroundData.map((item) => (
+                        <IconBackgroundCard data={item} key={item.id}  />
+                    ))
+                )}
             </ul>
         </article>
     );
