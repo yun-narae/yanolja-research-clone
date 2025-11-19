@@ -52,8 +52,7 @@ export default function VisualHighlightCardList() {
                         delay: 5000,
                         disableOnInteraction: false,
                     }}
-                    loop={true}
-                    loopAdditionalSlides={visualHighlightData.length}
+                    loop={false}
                     className="visual-highlight-swiper main_swiper_pc swiper-cards swiper-3d"
                     role="list"
                     aria-label="야놀자 배너 카드 목록"
