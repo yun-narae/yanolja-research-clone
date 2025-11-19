@@ -24,6 +24,10 @@ export default function DataCard() {
                             alt="아이콘"
                             className="w-full h-full"
                             aria-hidden="true"
+                            loading="lazy"
+                            decoding="async"
+                            width="118"
+                            height="103"
                         />
                     </div>
                     

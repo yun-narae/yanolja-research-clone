@@ -1,9 +1,15 @@
+import useScrollFadeIn from "../../hooks/useScrollFadeIn";
 import InsightCardList from "../Card/InsightCard/InsightCardList";
 import TrendReportCardList from "../Card/TrendReportCard/TrendReportCardList";
 
 export default function InsightTrendReportContent() {
+    const [ref, isVisible] = useScrollFadeIn();
+
     return (
-        <section className="w-full max-w-[1290px] mx-auto pl-[20px] tablet:px-[15px] mb-[56px] tablet:mb-[80px]">
+        <section 
+            ref={ref}
+            className={`w-full max-w-[1290px] mx-auto pl-[20px] tablet:px-[15px] mb-[56px] tablet:mb-[80px] ${isVisible ? 'fade-in-up' : 'fade-in-up-hidden'}`}
+        >
             <h2 className="sr-only">인사이트 및 동향보고서</h2>
 
             <div className="flex flex-col tablet:flex-row gap-[56px] tablet:gap-[80px]">

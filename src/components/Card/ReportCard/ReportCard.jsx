@@ -19,6 +19,11 @@ export default function ReportCard({ data }) {
                             src={cardData.image}
                             alt={cardData.title}
                             className="w-full h-full object-cover"
+                            loading="lazy"
+                            decoding="async"
+                            width="400"
+                            height="600"
+                            fetchPriority="low"
                         />
                     </div>
                     

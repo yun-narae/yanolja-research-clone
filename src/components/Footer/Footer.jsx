@@ -27,12 +27,16 @@ export default function Footer() {
                         <a
                             href="/"
                             className="inline-block w-[143px] mb-4"
-                            aria-label="야놀자 리서치"
+                            aria-label="야놀자리서치"
                         >
                             <img
                                 src={logo}
-                                alt="야놀자 리서치"
+                                alt="야놀자리서치"
                                 className="w-auto"
+                                loading="lazy"
+                                decoding="async"
+                                width="143"
+                                height="40"
                             />
                         </a>
 

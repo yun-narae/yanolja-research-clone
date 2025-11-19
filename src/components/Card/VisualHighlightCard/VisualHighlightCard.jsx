@@ -16,6 +16,11 @@ export default function VisualHighlightCard({ data }) {
                         src={cardData.image}
                         alt={cardData.title}
                         className="absolute inset-0 w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        width="800"
+                        height="600"
+                        fetchPriority="high"
                     />
                     
                     {/* 오버레이 및 콘텐츠 */}

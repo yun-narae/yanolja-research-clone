@@ -1,9 +1,10 @@
 // ReportCard 더미데이터
-import img1 from "../asset/report/img1.jpg";
-import img2 from "../asset/report/img2.png";
-import img3 from "../asset/report/img3.png";
-import img4 from "../asset/report/img4.png";
-import img5 from "../asset/report/img5.png";
+// 이미지 크기 최적화: 표시 크기(400x600)에 맞춰 리사이즈
+import img1 from "../asset/report/img1.jpg?w=400&format=webp&quality=75";
+import img2 from "../asset/report/img2.png?w=400&format=webp&quality=75";
+import img3 from "../asset/report/img3.png?w=400&format=webp&quality=75";
+import img4 from "../asset/report/img4.png?w=400&format=webp&quality=75";
+import img5 from "../asset/report/img5.png?w=400&format=webp&quality=75";
 
 export const reportData = [
     {

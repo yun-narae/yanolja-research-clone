@@ -31,6 +31,10 @@ export default function IconBackgroundCard({ data }) {
                         alt=""
                         className="w-[90px] h-[90px] group-hover:w-[100px] group-hover:h-[100px] transition-all duration-300 ease-in-out"
                         aria-hidden="true"
+                        loading="lazy"
+                        decoding="async"
+                        width="100"
+                        height="100"
                     />
                 </div>
 
