@@ -368,3 +368,9 @@ body {
 .visual-highlight-swiper.swiper-cards .swiper-slide-shadow-right {
     opacity: 1;
 }
+
+/* Vertical Text for Sticky Subscribe Button */
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
