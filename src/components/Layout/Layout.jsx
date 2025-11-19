@@ -6,6 +6,7 @@ import InsightTrendReportContent from '../InsightTrendReportContent/InsightTrend
 import ReportContent from '../ReportContent/ReportContent';
 import PressDataContent from '../PressDataContent/PressDataContent';
 import SnsContent from '../SnsContent/SnsContent';
+import StickySubscribeButton from '../StickySubscribeButton/StickySubscribeButton';
 
 export default function Layout() {
     return (
@@ -19,6 +20,7 @@ export default function Layout() {
                 <SnsContent />
             </main>
             <Footer />
+            <StickySubscribeButton />
         </>
     );
 }
